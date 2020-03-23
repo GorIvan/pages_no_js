@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(https://i.pinimg.com/originals/99/89/4c/99894c30404158ee2721ab1b2d160732.jpg);
+}
+.clock {
+	margin: 100px auto;
+	width: 300px;
+	height: 300px;
+	border: 4px solid black;
+	background-color: white;
+	background-image: url(https://kartinnay-galerey.ru/uploads/posts/news_thumb/2017-10/zhdun-potomu-chto-u-menya-lapki-i-drugie-samye-populyarnye-memy-2017-goda-20foto1video_2.jpeg);
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	box-shadow: 0px 8px 15px 6px rgba(0,0,0,0.5);
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.point {
+	width: 20px;
+	height: 20px;
+	background: red;
+	border-radius: 50%;
+	z-index: 1;
+}
+.clock div {
+	position: absolute;
+	font-size: 30px;
+}
+.number12 {
+	top: 15px;
+}
+.number3 {
+	right: 19.67px;
+}
+.number6 {
+	bottom: 15px;
+}
+.number9 {
+	left: 19.67px;
+}
+.lines {
+	width: 2px;
+	height: 15px;
+	top: 0;
+	background: black;
+	transform-origin: 1px 150px;
+}
+.clock div:nth-child(10) {
+	transform: rotate(30deg);
+}
+.clock div:nth-child(11) {
+	transform: rotate(60deg);
+}
+.clock div:nth-child(12) {
+	transform: rotate(90deg);
+}
+.clock div:nth-child(13) {
+	transform: rotate(120deg);
+}
+.clock div:nth-child(14) {
+	transform: rotate(150deg);
+}
+.clock div:nth-child(15) {
+	transform: rotate(180deg);
+}
+.clock div:nth-child(16) {
+	transform: rotate(210deg);
+}
+.clock div:nth-child(17) {
+	transform: rotate(240deg);
+}
+.clock div:nth-child(18) {
+	transform: rotate(270deg);
+}
+.clock div:nth-child(19) {
+	transform: rotate(300deg);
+}
+.clock div:nth-child(20) {
+	transform: rotate(330deg);
+}
+.hour_hand {
+	width: 15px;
+	height: 75px;
+	top: 75px;
+	background: black;
+	transform-origin: 7.5px 75px;
+	animation: hands 86400s infinite steps(60);
+}
+.minute_hand {
+	width: 10px;
+	height: 100px;
+	top: 50px;
+	background: black;
+	border-radius: 50%;
+	transform-origin: 5px 100px;
+	animation: hands 3600s infinite steps(60);
+}
+.second_hand {
+	width: 3px;
+	height: 150px;
+	top: 25px;
+	background: red;
+	border-radius: 50%;
+	transform-origin: 1.5px 125px;
+	animation: hands 60s infinite steps(60);
+}
+@keyframes hands {
+	100%{
+		transform: rotate(360deg);
+	}
+}

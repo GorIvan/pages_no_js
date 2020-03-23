@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+/*отключаем стартовую анимацию*/
+#transition_disabled {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+.main {
+  /*iphoneX*/
+  width: 375px;
+  height: 812px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(image.png);
+  background-size: cover;
+  background-position: center; 
+}
+.main .logo {
+  margin-top: 80px;
+  margin-bottom: 70px;
+}
+.logo img {
+  width: 70px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 120px;
+}
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+.signup {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.signin_text {
+  width: 88px;
+  height: 30px;
+  color: #efdecc;
+  font-family: Montserrat;
+  font-size: 25px;
+  font-weight: 400;
+  transition: 1s;
+}
+.signup_text {
+  width: 70px;
+  position: absolute;
+  top: 10px;
+  right: -88px;
+  font-size: 17px;
+  font-weight: 400;
+  opacity: 0.15;
+  color: #ffffff;
+  font-family: Montserrat;
+  transition: 1s;
+}
+.forgot_pass {
+  position: absolute;
+  width: 164px;
+  top: 215px;
+  color: #b4b4b4;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 76.72px;
+  letter-spacing: 1.25px;
+  opacity: 1;
+  transition: 1.5s;
+}
+.confirm {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 190px;
+  top: 240px;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 1.5s;
+}
+input:checked + label>.signin_text {
+  opacity: 0.15;
+  transform: translateX(-88px) translateY(20px);
+  font-size: 17px;
+  color: #ffffff;
+}
+input:checked + label>.signup_text {
+  width: 100px;
+  font-size: 25px;
+  color: #efdecc;
+  transform: translateX(-80px);
+  opacity: 1;
+}
+input:checked ~ .forgot_pass {
+  opacity: 0;
+}
+input:checked ~ .confirm {
+  opacity: 1;
+}
+
+.content_block {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+.mail {
+  margin-top: 50px;
+}
+.pass {
+  margin-top: 40px;
+}
+.content_line {
+  width: 300px;
+  height: 1px;
+  background-color: #dedede;
+  opacity: 0.15;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+}
+.button_signin {
+  border: 1px solid #ffffff;
+  margin-bottom: 20px;
+}
+.button_facebook {
+  background-color: #2553b3;
+}
+@media (max-height: 736px) {
+  .main {
+    width: 414px;
+    height: 736px;
+  }
+}
+@media (max-height: 667px) {
+  .main {
+   height: 667px;
+  }
+  .main .logo {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}  
+@media (max-height: 568px) {
+  .main {
+   height: 568px;
+  }
+  .main .logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .content {
+    margin-bottom: 100px;
+  }
+  .content_block {
+    font-size: 25px;
+  }
+  .content_line {
+    width: 250px;
+  }
+  .button {
+    width: 180px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 18px;
+  }  
+}  

@@ -1,0 +1,72 @@
+.main	{
+	margin: 5% auto;
+	width: 540px;
+	height: 750px;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	border-radius: 10px;
+	z-index: 1;
+	background-color: rgba(80, 55, 80, 1);
+	border: 10px solid rgba(80, 55, 80, 1);
+}
+.game {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin-bottom: 10px;
+	width: 490px;
+	height: 690px;
+	border-radius: 10px;
+	padding: 10px;
+	border: 10px solid rgba(80, 55, 80, 1);
+	box-shadow: 0 3px 3px #575555 inset;
+	background-image: url(http://qaru.site/img/43ba263df12f60c20cad596e7220cd51.jpg);
+	animation: anim 15s linear infinite;
+}
+.row {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.row div {
+	width: 50px;
+	height: 50px;
+	text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+				0 10px 10px rgba(0,0,0,0.22), 
+				0 3px 3px #575555 inset;
+	border-radius: 10px;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	color: rgba(0,0,0,0.6);
+	background-position: center, center;
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+	align-items: center;
+}
+.empty-block {
+	opacity: 0;
+}
+.red-block {
+	background-color: red;
+}
+.yellow-block {
+	background-color: yellow;
+}
+.green-block {
+	background-color: green;
+}
+.blue-block {
+	background-color: blue;
+}
+@keyframes anim {
+	0% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
